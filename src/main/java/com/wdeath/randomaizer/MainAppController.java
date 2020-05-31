@@ -42,13 +42,18 @@ public class MainAppController implements Initializable {
 
     public void clickGenerate(ActionEvent event){
         ArrayList<String> list = (ArrayList<String>) Database.getInstance().getList();
-        Random random = new Random();
-        int element = random.nextInt(list.size());
 
-        String action = list.get(element);
+        if (list.size() == 0) {
+            message.setText("Empty list");
+        } else {
+            Random random = new Random();
+            int element = random.nextInt(list.size());
 
-        String messageStr = "Вам выпало: \n" + action;
-        message.setText(messageStr);
+            String action = list.get(element);
+
+            String messageStr = "Вам выпало: \n" + action;
+            message.setText(messageStr);
+        }
     }
 
     @Override
