@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="519.0" prefWidth="443.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wdeath.randomaizer.MainAppController">
+
+    <left>
+        <VBox prefWidth="150" spacing="5">
+            <children>
+                <TextField fx:id="field" />
+                <Button onAction="#clickAdd" prefWidth="400" text="Add" />
+                <Button prefWidth="400" text="Save" onAction="#clickSave"/>
+                <Button prefWidth="400" text="Generate" onAction="#clickGenerate"/>
+                <Label text="" fx:id="message"/>
+            </children>
+            <padding>
+                <Insets bottom="5" left="5" right="5" top="5" />
+            </padding>
+        </VBox>
+    </left>
+   <right>
+      <ScrollPane prefWidth="300">
+        <content>
+            <VBox spacing="5" fx:id="panel">
+                <children>
+
+                </children>
+                <padding>
+                    <Insets bottom="5" left="5" right="5" top="5" />
+                </padding>
+            </VBox>
+        </content>
+      </ScrollPane>
+   </right>
+
+</BorderPane>
